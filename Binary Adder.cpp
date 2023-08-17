@@ -147,7 +147,7 @@ string addNumbers(string num1, string num2) {
 }
 
 
-int calculate(string input1, string input2, bool dispCalc) {
+string calculate(string input1, string input2, bool dispCalc) {
 
 	//string input1 = "1000101";
 	//string input2 = "1011101";
@@ -208,13 +208,13 @@ int calculate(string input1, string input2, bool dispCalc) {
 
 	}
 
-	outputInt = stoi(outputStrng);
+	//outputInt = stoi(outputStrng);
 
 	if (dispCalc == false) {
-		cout << outputInt;
+		cout << outputStrng;
 	}
 
-	return outputInt;
+	return outputStrng;
 
 
 }
@@ -222,10 +222,14 @@ int calculate(string input1, string input2, bool dispCalc) {
 
 int main(){
 
-	string input1 = "1011111";
-	string input2 = "101011100";
+	string input1 = "01011111";
+	string input2 = "10101110";
 	bool displayCalculation = true;
 
+	cout << "Enter first binary number:   ";
+	cin >> input1;
+	cout << "Enter second binary number:  ";
+	cin >> input2;
 
 	calculate(input1, input2, displayCalculation);
 

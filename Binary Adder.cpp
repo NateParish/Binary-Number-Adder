@@ -147,7 +147,6 @@ string addNumbers(string num1, string num2) {
 }
 
 
-
 int calculate(string input1, string input2) {
 
 	//string input1 = "1000101";

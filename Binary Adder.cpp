@@ -169,6 +169,8 @@ int calculate(string input1, string input2) {
 		input2 = adjustStringLength(input2, lenDiff);
 	}
 
+
+
 	lenInput1 = input1.length();
 	lenInput2 = input2.length();
 
@@ -203,16 +205,11 @@ int calculate(string input1, string input2) {
 
 	outputInt = stoi(outputStrng);
 
-	return outputInt;
 
 }
 
 
 
-int main() {
-
-	string input1 = "1000101";
-	string input2 = "1011101";
 
 	cout << calculate(input1, input2) << endl;
 

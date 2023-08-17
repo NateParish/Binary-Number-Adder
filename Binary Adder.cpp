@@ -123,7 +123,7 @@ string addNumbers(string num1, string num2) {
 						fin = true;
 					}
 					if (number2 == "1") {
-						sum = "0";
+						sum = "1";
 						carry = "1";
 						fin = true;
 					}
@@ -147,7 +147,7 @@ string addNumbers(string num1, string num2) {
 }
 
 
-int calculate(string input1, string input2) {
+int calculate(string input1, string input2, bool dispCalc) {
 
 	//string input1 = "1000101";
 	//string input2 = "1011101";
@@ -196,22 +196,38 @@ int calculate(string input1, string input2) {
 	}
 
 
-	// display the calculation in both binary and base 10
+	if (dispCalc == true) {
 
-	//cout << "    " << input1 << "                " << convertToBaseTen(input1) << endl;
-	//cout << "  + " << input2 << "              + " << convertToBaseTen(input2) << endl;
-	//cout << "----------------------------------------------------------------" << endl;
-	//cout << "    " << outputStrng << "                " << convertToBaseTen(outputStrng) << endl;
+		// display the calculation in both binary and base 10
+
+		cout << endl;
+		cout << "    " << input1 << "                " << convertToBaseTen(input1) << endl;
+		cout << "  + " << input2 << "              + " << convertToBaseTen(input2) << endl;
+		cout << "----------------------------------------------------------------" << endl;
+		cout << "    " << outputStrng << "                " << convertToBaseTen(outputStrng) << endl;
+
+	}
 
 	outputInt = stoi(outputStrng);
+
+	if (dispCalc == false) {
+		cout << outputInt;
+	}
+
+	return outputInt;
 
 
 }
 
 
+int main(){
+
+	string input1 = "1011111";
+	string input2 = "101011100";
+	bool displayCalculation = true;
 
 
-	cout << calculate(input1, input2) << endl;
+	calculate(input1, input2, displayCalculation);
 
 
 	return 0;

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <stdlib.h>
 using namespace std;
 
 string adjustStringLength(string binaryNumber, int count) {
@@ -222,15 +223,37 @@ int main(){
 
 	string input1 = "01011111";
 	string input2 = "10101110";
+	string response = "";
 	bool displayCalculation = true;
+	bool exitApp = false;
 
-	cout << "Enter first binary number:   ";
-	cin >> input1;
-	cout << "Enter second binary number:  ";
-	cin >> input2;
+	while (exitApp == false) {
 
-	calculate(input1, input2, displayCalculation);
+		cout << "Enter first binary number:   ";
+		cin >> input1;
+		cout << "Enter second binary number:  ";
+		cin >> input2;
+
+		calculate(input1, input2, displayCalculation);
+
+		cout << endl;
+		cout << "Exit Program? (Y/N) :";
 
 
+		cin >> response;
+
+		if (response == "Y") {
+			exitApp = true;
+		}
+		if (response == "y") {
+			exitApp = true;
+		}
+
+		cout << endl;
+
+
+	}
+
+	
 	return 0;
 }

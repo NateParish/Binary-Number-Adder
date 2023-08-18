@@ -208,8 +208,6 @@ string calculate(string input1, string input2, bool dispCalc) {
 
 	}
 
-	//outputInt = stoi(outputStrng);
-
 	if (dispCalc == false) {
 		cout << outputStrng;
 	}
